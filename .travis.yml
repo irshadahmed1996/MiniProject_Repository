@@ -3,6 +3,7 @@ sudo: false # only for faster builds
 compiler:
    -clang
    -gcc
+   -Atmel AVR
 script:
   - clang -coverage -O0 integratedCode.c -o integratedCode
   - ./integratedCode
