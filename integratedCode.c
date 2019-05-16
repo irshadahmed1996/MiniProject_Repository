@@ -260,7 +260,6 @@ int main(void) {
     } else
       CLR_BIT(PORTD, PD6);
   }
-  return 0;
 }
 
 ISR(INT0_vect) //interrupt service routine when there is a change in logic level
