@@ -1,7 +1,8 @@
 language: c
-before_install:
- 	- sudo apt-get update -qq
-install:
- 	- sudo apt-get install -qq gcc-avr binutils-avr avr-libc
-script: make
-
+sudo: false # only for faster builds
+compiler:
+   -clang
+   -gcc
+script:
+  - clang -coverage -O0 integratedCode.c -o integratedCode
+  - ./integratedCode
